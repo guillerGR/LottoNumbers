@@ -49,7 +49,7 @@ class Drawing {
         return "Drawing of \(numberOfBallsToDraw) " + (numberOfBallsToDraw == 1 ? "ball" : "balls") + " from \(smallestValue) to \(biggestValue)\n"
     }
     
-    var topBalls: Slice<Ball> {
+    var topBalls: ArraySlice<Ball> {
         let sortedBalls = sorted(balls.values) { $0 > $1 }
         let onlyTopBalls = sortedBalls[0..<numberOfBallsToDraw]
         return onlyTopBalls
